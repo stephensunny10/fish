@@ -1,4 +1,4 @@
-const socket = io('127.0.0.1:3003'); // remove it to connect with localhost  https://enigmatic-island-34591.herokuapp.com/
+const socket = io(); // remove it to connect with localhost  https://enigmatic-island-34591.herokuapp.com/
 var userName = '';
 var content ="";
 
