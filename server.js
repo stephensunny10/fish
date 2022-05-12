@@ -1,6 +1,12 @@
     var port = process.env.PORT || 3004,
-    io = require('socket.io')(port),
+    //io = require('socket.io')(port),
     gameSocket = null;
+
+    var io = require('socket.io')({
+        transports: ['websocket'],
+    });
+    
+    io.attach(port);
 
     gameSocket = io.on('connection', function(socket){
     console.log('socket connected: ' + socket.id);
